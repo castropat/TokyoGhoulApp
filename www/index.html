@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://framework7.io/docs-demos/photo-browser.html -->
+<html class="pixel-ratio-1 watch-active-state"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>Pangasinan Ghoul</title>
+<link rel="stylesheet" href="./framework7.ios.min.css">
+<link rel="stylesheet" href="./framework7.ios.colors.min.css">
+<link rel="stylesheet" href="./css/my-app.css">
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+
+<div class="view view-main" data-page="home">
+<div class="navbar theme-black">
+<div class="navbar-inner">
+<div class="left"> </div>
+<div class="center sliding" style="left: 0px;font-size:25px;font-family:american captain">Pangasinan Ghoul</div>
+<div class="right"> </div>
+</div>
+</div>
+<div class="pages navbar-through">
+<div data-page="home" class="page">
+<div class="page-content" style="background-image: url(ghoul/backg.png);">
+<br>
+<br>
+<br>
+<div class="content-block-title" style="left: 0px;font-size:25px;font-family:american captain">ARTICOLO</div>
+<div class="content-block row">
+<div class="col-33" style="left: 0px;font-size:50px;font-family:Papyrus"><a href="#" class="button tokyo">UNAAN</a></div>
+<div class="col-33" style="left: 0px;font-size:25px;font-family:Papyrus"><a href="#" class="button pb-popup-dark">KUMADWA</a></div>
+<div class="col-33" style="left: 0px;font-size:25px;font-family:Papyrus"><a href="" class="button pb-page-dark">KUMATLO</a></div>
+</div>
+<div class="content-block" style="left: 0px;font-size:50px;font-family:Papyrus"><a href="#" class="button pb-standalone-captions">SITE NAPANBANTAYAN</a></div>
+
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./framework7.min.js.download"></script>
+<script>
+      var myApp = new Framework7(); 
+      
+      var $$ = Dom7;
+      
+      var mainView = myApp.addView('.view-main', {
+        dynamicNavbar: true
+      });
+      
+     
+      
+      /*=== Standalone Dark ===*/
+      var myPhotoBrowserDark = myApp.photoBrowser({
+          photos : [
+              'ghoul/001.png',
+               'ghoul/007.png',
+               'ghoul/008.png',
+               'ghoul/009.png',
+               'ghoul/010.png',
+               'ghoul/011.png',
+               'ghoul/012.png',
+               'ghoul/013.png',
+               'ghoul/014.png',
+               'ghoul/016.png',
+               'ghoul/017.png',
+               'ghoul/018.png',
+               'ghoul/019.png',
+               'ghoul/020.png',
+               'ghoul/021.png',
+               'ghoul/022.png',
+               'ghoul/023.png',
+               'ghoul/024.png',
+               'ghoul/025.png',
+               'ghoul/026.png',
+               'ghoul/027.png',
+               'ghoul/028.png',
+               'ghoul/029.png',
+               'ghoul/030.png',
+               'ghoul/031.png',
+               'ghoul/032.png',
+               'ghoul/033.png',
+               'ghoul/034.png',
+               'ghoul/035.png',
+               'ghoul/036.png',
+               'ghoul/037.png',
+               'ghoul/038.png',
+               'ghoul/039.png',
+               'ghoul/040.png',
+               'ghoul/041.png',
+               'ghoul/042.png',
+               'ghoul/043.png',
+               'ghoul/044.png',
+          ],
+          theme: 'dark'
+      });
+      $$('.tokyo').on('click', function () {
+          myPhotoBrowserDark.open();
+      });
+      
+      /*=== Popup Dark ===*/
+      var myPhotoBrowserPopupDark = myApp.photoBrowser({
+          photos : [
+             'ghoul/001.png',
+               'ghoul/007.png',
+               'ghoul/008.png',
+               'ghoul/009.png',
+               'ghoul/010.png',
+               'ghoul/011.png',
+               'ghoul/012.png',
+               'ghoul/013.png',
+               'ghoul/014.png',
+               'ghoul/016.png',
+               'ghoul/017.png',
+               'ghoul/018.png',
+               'ghoul/019.png',
+               'ghoul/020.png',
+               'ghoul/021.png',
+               'ghoul/022.png',
+               'ghoul/023.png',
+               'ghoul/024.png',
+               'ghoul/025.png',
+               'ghoul/026.png',
+               'ghoul/027.png',
+               'ghoul/028.png',
+               'ghoul/029.png',
+               'ghoul/030.png',
+               'ghoul/031.png',
+               'ghoul/032.png',
+               'ghoul/033.png',
+               'ghoul/034.png',
+               'ghoul/035.png',
+               'ghoul/036.png',
+               'ghoul/037.png',
+               'ghoul/038.png',
+               'ghoul/039.png',
+               'ghoul/040.png',
+               'ghoul/041.png',
+               'ghoul/042.png',
+               'ghoul/043.png',
+               'ghoul/044.png',
+          ],
+          theme: 'dark',
+          type: 'popup'
+      });
+      $$('.pb-popup-dark').on('click', function () {
+          myPhotoBrowserPopupDark.open();
+      });
+      
+      /*===Page Dark ===*/
+     var myPhotoBrowserPageDark = myApp.photoBrowser({
+          photos : [
+              'ghoul/com.png',
+          ],
+          theme: 'dark',
+          type: 'page'
+      });
+      $$('.pb-page-dark').on('click', function () {
+          myPhotoBrowserPageDark.open();
+      });
+      
+      /*=== With Captions ===*/
+      var myPhotoBrowserCaptions = myApp.photoBrowser({
+          photos : [
+              {
+                  url: 'https://www.facebook.com/',
+                  caption: 'Caption 1 Text'
+              },
+              {
+                  url: 'http://lorempixel.com/1024/1024/sports/2/',
+                  caption: 'Second Caption Text'
+              },
+              // This one without caption
+              {
+                  url: 'http://lorempixel.com/1024/1024/sports/3/',
+              },
+          ],
+          theme: 'dark',
+          type: 'standalone'
+      });
+      $$('.pb-standalone-captions').on('click', function () {
+          myPhotoBrowserCaptions.open();
+      });
+      
+      /*=== With Video ===*/
+      var myPhotoBrowserVideo = myApp.photoBrowser({
+          photos : [
+              {
+                  html: '<iframe src="//www.youtube.com/embed/lmc21V-zBq0?list=PLpj0FBQgLGEr3mtZ5BTwtmSwF1dkPrPRM" frameborder="0" allowfullscreen></iframe>',
+                  caption: 'Woodkid - Run Boy Run (Official HD Video)'
+              },
+              {
+                  url: 'http://lorempixel.com/1024/1024/sports/2/',
+                  caption: 'Second Caption Text'
+              },
+              {
+                  url: 'http://lorempixel.com/1024/1024/sports/3/',
+              },
+          ],
+          theme: 'dark',
+          type: 'standalone'
+      });
+      $$('.pb-standalone-video').on('click', function () {
+          myPhotoBrowserVideo.open();
+      });
+    </script>
+
+</body></html>
